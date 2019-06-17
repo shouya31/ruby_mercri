@@ -1,2 +1,13 @@
-section.hero.is-info.is-large
+section.hero.is-large
   = image_tag 'mercari-hero.png'
+  .section
+    .container
+      .mercari-items
+        - @items.each do |item|
+          .mercari-item
+            .mercari-item-image
+              = image_tag item.image_url
+            .mercari-item-name
+              = item.name
+            .mercari-item-price
+              = item.price

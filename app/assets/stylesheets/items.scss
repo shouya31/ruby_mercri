@@ -17,20 +17,40 @@
     background: rgb(102, 102, 102);
     color: white;
   }
-  &-list{
-    &-left{
+
+  &-list {
+    &-left {
       display: flex;
     }
   }
-  
 
-.has-text-weight-bold{
-  font-weight: bold !important;
-}
 
-}
-.fa-list,.fa-tags{
-    color: red;
-    font-size: 22px;
-    padding: 0 5px;
+  .has-text-weight-bold {
+    font-weight: bold !important;
   }
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+  }
+
+  &-item {
+    height: 300px;
+    width: 220px;
+    padding:15px;
+    text-align: center;
+
+    img {
+      height: 220px;
+    }
+  }
+}
+
+.fa-list,
+.fa-tags {
+  color: red;
+  font-size: 22px;
+  padding: 0 5px;
+}
