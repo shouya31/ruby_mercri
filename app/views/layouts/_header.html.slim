@@ -1,0 +1,23 @@
+section.section[style="margin-left: 150px"]
+  .container
+    .columns
+      div[style="width: 155px;"]
+        = image_tag 'logo.svg'
+      .input.column.is-8.mercari-form
+        .button.mercari-button
+          i.fa.fa-search
+    .mercari-list.columns
+      ul.mercari-list-left.column
+        li.is-flex[style="margin: 0 10px;"]
+          i.fa.fa-list
+          p[style="font-weight: bold;"]
+            | カテゴリーから探す
+        li.is-flex
+          i.fa.fa-tags
+          p[style="font-weight: bold;"]
+            | ブランドから探す
+      .mercari-list-right.column.has-text-centered
+        a.button.is-danger.is-outlined[style="margin: 0 10px;"]
+          | 新規登録
+        a.button.is-info.is-outlined
+          | ログイン
