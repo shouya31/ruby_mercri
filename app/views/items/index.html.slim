@@ -1,10 +1,10 @@
 section.hero.is-large
   = image_tag 'mercari-hero.png'
-  .section
+  .section[style="background-color: aliceblue;"]
     .container
       .mercari-items
         - @items.each do |item|
-          .mercari-item
+          .mercari-item[style="background-color: white;"]
             .mercari-item-image
               = image_tag item.image_url
             .mercari-item-name
