@@ -2,9 +2,10 @@
   <div class="mercari-list-left" style='margin:0 10px;'
     @mouseover="mouseOver"
     @mouseleave="mouseLeave"
+  
   >
     <i class="fa fa-list"></i>
-    <div class="has-text-black is-flex" style="font-weight: bold;">
+    <div class="has-text-black" style="font-weight: bold;">
       <p>{{name}}</p>
       <!-- ここから階層が始まる -->
       <!-- １階層目 -->
@@ -14,25 +15,26 @@
         >
           <li 
             @mouseover="genreOver"
-            @mouseleave="genreLeave"
+            
           >
             {{ item.name }}
           </li>
           <!-- ２階層目 -->
-          <div class="is-flex" 
+          <div class="" 
             v-if="active2"
           >
-            <li 
+            <li class="is-flex mercari-fixed_list" 
               v-for="item in item.page1"
               @mouseover="itemOver"
               @mouseleave="itemLeave"
             >
               {{item.name}}
               <!-- ３階層目 -->
-              <div class="is-flex" 
+              <div class="" 
                 v-if="active3"
               >
                 <li 
+                  class="is-flex mercari-fixed_list" 
                   v-for="item in item.page2"
                 >
                   {{item.name}}
@@ -789,9 +791,6 @@ export default {
     },
     genreOver: function() {
       this.active2 = true;
-    },
-    genreLeave: function() {
-      this.active2 = false;
     },
     itemOver: function() {
       this.active3 = true;
